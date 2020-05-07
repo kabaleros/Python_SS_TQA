@@ -1,0 +1,24 @@
+#Task1
+#Define variables a and b. Read values a and b from console and calculate:
+#a + b
+#a - b
+#a * b
+#a / b.
+#Output obtained results.
+
+print ('Input two numbers:')
+print ('Input a')
+a = float(input())
+print ('Input b')
+b = float(input())
+print('You have entered values a=', a, ' b=', b)
+if b==0:
+    print('a+b=', a+b)
+    print('a-b=', a-b)
+    print('a*b=', a*b)
+    print('Cannot calculate a/b')
+else:
+    print('a+b=', a + b)
+    print('a-b=', a - b)
+    print('a*b=', a * b)
+    print('a/b=', a / b)

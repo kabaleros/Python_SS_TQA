@@ -5,12 +5,17 @@
 # Нехай k - ціле від 1 до 365. Присвоїти цілій змінній n значення (понеділок, вівторок ююю, субота чи неділя) залежно від того,
 # на який день тижня припадає k-й день не високосного року, в якому перше січня - понеділок.
 
-year = int(input("Input a year" + "\n"))
-if year % 4 != 0:
-    print("This is not a leap year!")
-elif year % 100 != 0:
-    print("It's a leap year!")
-elif year % 400 != 0:
-    print("This is not a leap year!")
+a = float(input("Input a" + "\n"))
+b = float(input("Input b" + "\n"))
+c = float(input("Input c" + "\n"))
+D=b**2-4*a*c
+
+if a == 0:
+    print("there is one root", -c/b)
+elif D < 0:
+    print("there are no roots")
+elif D == 0:
+    print("there is one root", -b/(2*a))
 else:
-    print("It's a leap year!")
+    print("there are two distinct roots",(-b*+D**0.5)/(2*a),",", (-b-D**0.5)/(2*a))
+

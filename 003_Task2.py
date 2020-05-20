@@ -10,7 +10,6 @@ month = int(input("Input a month" + "\n"))
 year = int(input("Input a year" + "\n"))
 leap=False
 str_date=str(day) + "." + str(month) + "." + str(year) + " is correct date"
-
 if year%4 != 0:
     leap=False
 elif year%100 !=0:
@@ -18,7 +17,6 @@ elif year%100 !=0:
 elif year%400 != 0:
     leap=False
 else: leap = True
-
 if year <0 or month <0 or day <0 or month >12 or day >31:
         print("incorrect date")
 elif day == 29 and month==2 and leap == False:
@@ -28,4 +26,4 @@ elif day == 30 and month ==2:
 elif day == 31 and month not in (1,3,5,7,8,10,12):
     print("incorrect date")
 else:
-    print(str_date, leap)
+    print(str_date)

@@ -5,15 +5,9 @@
 # Нехай k - ціле від 1 до 365. Присвоїти цілій змінній n значення (понеділок, вівторок, ..., субота чи неділя) залежно від того,
 # на який день тижня припадає k-й день не високосного року, в якому перше січня - понеділок.
 
-a = float(input("Input a" + "\n"))
-b = float(input("Input b" + "\n"))
-c = float(input("Input c" + "\n"))
-
-if a <= 0 or b <= 0 or c <= 0:
-    print("no triangle possible")
-elif a + b <= c or a + c <= b or b + c <= a:
-    print("no triangle possible")
-else:
-    p = a+b+c
-    s = (p*(p-a)*(p-b)*(p-c))**0.5
-    print("Perimeter is " + str(p) + ". Square is " + str(s) + ".")
+k = int(input("Input k" + "\n"))
+if k<1 or k>365:
+    print ("wrong k")
+day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+n = day [k%7]
+print(n)

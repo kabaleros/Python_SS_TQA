@@ -13,8 +13,6 @@
 n_str = input('Input 4-digit number' + '\n')
 n_int = int(n_str)
 mult = 1
-reverse = ''
-sorted = ''
 if n_int>9999 or n_int<1000 :
     print ('Incorrect number')
 else :
@@ -24,10 +22,6 @@ else :
         mult *= i
     print('Product of numbers is', mult)
     n_str = n_str[::-1]
-    for i in n_str:
-        reverse += i
-    print('Reversed number is', reverse)
+    print('Reversed number is %s' % ''.join(n_str))
     n_str.sort()
-    for i in n_str:
-        sorted += i
-    print('Sorted number is', sorted)
+    print('Sorted number is %s' % ''.join(n_str))

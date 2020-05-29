@@ -18,4 +18,3 @@ elif D == 0:
     print("there is one root", -b/(2*a))
 else:
     print("there are two distinct roots",(-b*+D**0.5)/(2*a),",", (-b-D**0.5)/(2*a))
-

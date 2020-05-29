@@ -13,4 +13,3 @@ else:
             break
     else:
         print(number, "is prime")
-

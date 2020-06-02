@@ -4,17 +4,19 @@
 # 4. Вводиться нормалізований текст, який крім слів може містити певні знаки пунктуації. Програма будує список слів, знаки пунктуації виключаються.
 #    Під нормалізованим текстом будемо розуміти текст, в якому пробіл ставиться після знаків пунктуації, за винятком відкриває дужки (пробіл перед нею).
 # 5. Дана матриця. Знайти в ній рядок з максимальною сумою елементів, а також стовпець.
+# 6. Генерується квадратна матриця. Знайти сума елементів її головнї та побічної діагоналей.
+#    Головна діагональ йде з верхнього лівого кута в правий нижній, побічна - з верхнього правого кута в лівий нижній.
 from random import random
+N = 5
 matrix = []
-tr_matrix = []
-for i in range(5):
+for i in range(N):
     row = []
-    for j in range(5):
+    for j in range(N):
         row.append(int(random()*10))
     matrix.append(row)
 for row in matrix:
     print(row)
-row_sum = [sum([row[i] for i in range(len(matrix))]) for row in matrix]
-print("Max row value is ", max(row_sum), "in row", row_sum.index(max(row_sum))+1 )
-col_sum = [sum([row[i] for row in matrix]) for i in range(len(matrix))]
-print("Max value", max(col_sum), "in column", col_sum.index(max(col_sum))+1)
+m_diag = [row[matrix.index(row)] for row in matrix]
+print("Sum of elements in main diagonal is", sum(m_diag), "elements are", m_diag)
+o_diag = [row[len(matrix) - matrix.index(row)-1] for row in matrix]
+print("Sum of elements in other diagonal is", sum(o_diag), "elements are", o_diag)

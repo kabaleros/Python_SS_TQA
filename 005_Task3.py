@@ -2,5 +2,6 @@
 # Вихідний список містить позитивні і негативні числа. Потрібно позитивні помістити в один список, а негативні - в інший.
 # Дан список цілих чисел. Замінити негативні на -1, позитивні - на число 1, нуль залишити без змін.
 listOrigin = [10, -15, 3, 8, 0, 9, -6, 13, -1, 5]
-listMask = [1 if i > 0 else 0 for i in listOrigin]
+listMask = [1 if i > 0 else i for i in listOrigin]
+listMask = [-1 if i < 0 else i for i in listMask]
 print(listMask)
